@@ -4532,7 +4532,7 @@ GameObject:
   - component: {fileID: 1098797223}
   - component: {fileID: 1098797222}
   m_Layer: 5
-  m_Name: WinGameCanvas
+  m_Name: WinCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5610,7 +5610,7 @@ GameObject:
   - component: {fileID: 1404080531}
   - component: {fileID: 1404080530}
   m_Layer: 5
-  m_Name: EarthBack
+  m_Name: BackImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
