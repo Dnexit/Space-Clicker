@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,11 +10,15 @@ public class MainButtonScript : MonoBehaviour
 {
     private Button mainButton;
     [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private string scoreBaseText = "SCORE: ";
     [SerializeField] private string scoreFunText;
-    [SerializeField] private GameObject nextLevel;
+    [SerializeField] private LevelManager _levelManager;
 
     private int count = 0;
+
+    private void OnValidate()
+    {
+        _levelManager = FindObjectOfType<LevelManager>();
+    }
 
     private void Awake()
     {
@@ -21,18 +26,23 @@ public class MainButtonScript : MonoBehaviour
         
         mainButton.onClick.AddListener(() =>
         {
-            count++;
-            scoreText.text = scoreBaseText + count;
+            
+            if (Input.GetKey(KeyCode.LeftShift))
+                count += 100;
+            else
+                count++;
+
+            scoreText.text = $"SCORE: {count:D5}";
+            
+            
             if (count == 10)
             {
                 scoreText.text = scoreFunText;
             }
 
-            if (count > 100)
+            if (count >= _levelManager.CurrentLevel.CountToNext)
             {
-                count = 0;
-                transform.parent.gameObject.SetActive(false);
-                nextLevel.SetActive(true);
+                _levelManager.NextLevel();
             }
         });
     }
