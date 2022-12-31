@@ -1,18 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class SettingsCanvas : MonoBehaviour
+public class SettingsCanvas : Page
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button BackButton;
+    [SerializeField] private FirstLevelCanvas firstLevelCanvas;
+
+    private void Awake()
     {
-        
+        BackButton.onClick.AddListener((() =>
+        {
+            HideCanvas();
+            firstLevelCanvas.ShowCanvas();
+        }));
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public override void HideCanvas()
     {
-        
+        base.HideCanvas();
+    }
+
+    public override void ShowCanvas()
+    {
+        base.ShowCanvas();
     }
 }
