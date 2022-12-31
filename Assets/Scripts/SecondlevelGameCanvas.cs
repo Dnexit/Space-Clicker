@@ -37,6 +37,7 @@ public class SecondlevelGameCanvas : Page
     public void ShowCanvas(int _count)
     {
         count = _count;
+        scoreText.text = scoreBaseText + count;
         base.ShowCanvas();
     }
 }
