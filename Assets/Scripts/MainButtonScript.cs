@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class MainButtonScript : MonoBehaviour
 {
     private Button mainButton;
-    [SerializeField]private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private string scoreBaseText = "SCORE: ";
     [SerializeField] private string scoreFunText;
     
