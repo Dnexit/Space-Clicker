@@ -1027,7 +1027,6 @@ GameObject:
   - component: {fileID: 314756981}
   - component: {fileID: 314756980}
   - component: {fileID: 314756979}
-  - component: {fileID: 314756982}
   m_Layer: 5
   m_Name: MainButton
   m_TagString: Untagged
@@ -1137,21 +1136,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314756977}
   m_CullTransparentMesh: 1
---- !u!114 &314756982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 314756977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ffb457c1d516574cbf9ddfd6a16ec9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 786898041}
-  scoreBaseText: 'SCORE: '
-  scoreFunText: HELLO BEBRA
 --- !u!1 &345516809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,7 +1910,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &532495580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,7 +2011,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8c7c2fa457b3334bb4715d75d907d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settingsButton: {fileID: 0}
+  settingsButton: {fileID: 785967774}
+  _settingsCanvas: {fileID: 535946173}
+  secondLevelGameCanvas: {fileID: 1054705963}
+  mainButton: {fileID: 314756979}
+  scoreText: {fileID: 786898041}
+  scoreBaseText: 'SCORE: '
+  scoreFunText: 
 --- !u!1 &535946168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,6 +2117,7 @@ RectTransform:
   - {fileID: 3992212498265141300}
   - {fileID: 1836892994}
   - {fileID: 1756331947}
+  - {fileID: 2097335755}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2147,6 +2138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa1372d072f633459b91872ec751f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BackButton: {fileID: 2097335752}
+  switchMusic: {fileID: 3992212498265141296}
+  switchSound: {fileID: 1756331948}
+  audioMixer: {fileID: 24100000, guid: 72d65fdcbb77da74fbae98d348fb7a14, type: 2}
 --- !u!1 &586563903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,7 +2371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &624747867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3641,7 +3636,7 @@ AudioSource:
   m_GameObject: {fileID: 874755336}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 317921146896821567, guid: 72d65fdcbb77da74fbae98d348fb7a14, type: 2}
   m_audioClip: {fileID: 8300000, guid: 064fd8d1059d723418ca2c5126def6c3, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3755,7 +3750,6 @@ GameObject:
   - component: {fileID: 905907884}
   - component: {fileID: 905907883}
   - component: {fileID: 905907882}
-  - component: {fileID: 905907881}
   m_Layer: 5
   m_Name: MainButton
   m_TagString: Untagged
@@ -3783,21 +3777,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 849, y: 849}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &905907881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905907879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ffb457c1d516574cbf9ddfd6a16ec9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1178169791}
-  scoreBaseText: 'SCORE: '
-  scoreFunText: HELLO BEBRA
 --- !u!114 &905907882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4179,7 +4158,6 @@ GameObject:
   - component: {fileID: 1018392371}
   - component: {fileID: 1018392370}
   - component: {fileID: 1018392369}
-  - component: {fileID: 1018392368}
   m_Layer: 5
   m_Name: MainButton
   m_TagString: Untagged
@@ -4207,21 +4185,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 849, y: 849}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1018392368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018392366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ffb457c1d516574cbf9ddfd6a16ec9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 727478501}
-  scoreBaseText: 'SCORE: '
-  scoreFunText: HELLO BEBRA
 --- !u!114 &1018392369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4451,6 +4414,7 @@ GameObject:
   - component: {fileID: 1054705961}
   - component: {fileID: 1054705960}
   - component: {fileID: 1054705959}
+  - component: {fileID: 1054705963}
   m_Layer: 5
   m_Name: 2levelGameCanvas
   m_TagString: Untagged
@@ -4547,6 +4511,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1054705963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054705958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc6bb0cda709854796d7a149a6c3123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsButton: {fileID: 1528506849}
+  _settingsCanvas: {fileID: 535946173}
+  mainButton: {fileID: 905907882}
+  scoreText: {fileID: 1178169791}
+  scoreBaseText: 'SCORE: '
+  scoreFunText: 
 --- !u!1 &1098797221
 GameObject:
   m_ObjectHideFlags: 0
@@ -7479,6 +7461,127 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060930219}
   m_CullTransparentMesh: 1
+--- !u!1 &2097335751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2097335755}
+  - component: {fileID: 2097335754}
+  - component: {fileID: 2097335753}
+  - component: {fileID: 2097335752}
+  m_Layer: 5
+  m_Name: BackButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2097335752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097335751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2097335753}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2097335753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097335751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ff18f403c2c3bb9458829ff8a3922a0e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2097335754
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097335751}
+  m_CullTransparentMesh: 1
+--- !u!224 &2097335755
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097335751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 535946172}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 238, y: -1030}
+  m_SizeDelta: {x: 424, y: 107}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3992212498265141296
 MonoBehaviour:
   m_ObjectHideFlags: 0
