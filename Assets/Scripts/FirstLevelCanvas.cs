@@ -22,6 +22,7 @@ public class FirstLevelCanvas : Page
      {
          settingsButton.onClick.AddListener(() =>
          {
+             PlaySoundButton();
              this.HideCanvas();
              _settingsCanvas.ShowCanvas(this);
          });

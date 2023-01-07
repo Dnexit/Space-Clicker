@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Page : MonoBehaviour
 {
+    [SerializeField] private AudioSource sound;
     public virtual void HideCanvas()
     {
         gameObject.SetActive(false);
@@ -14,4 +15,10 @@ public class Page : MonoBehaviour
     {
         gameObject.SetActive(true);    
     }
+
+    public virtual void PlaySoundButton()
+    {
+        sound.Play();
+    }
+    
 }

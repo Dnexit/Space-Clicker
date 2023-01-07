@@ -18,27 +18,32 @@ public class SettingsCanvas : Page
     {
         BackButton.onClick.AddListener((() =>
         {
+            PlaySoundButton();
             HideCanvas();
             lastPage.ShowCanvas();
         }));
         
         switchMusic.OnDisable.AddListener((() =>
         {
+            PlaySoundButton();
             audioMixer.SetFloat("MusicVolume", -80f);
         }));
         
         switchMusic.OnEnable.AddListener((() =>
         {
+            PlaySoundButton();
             audioMixer.SetFloat("MusicVolume", 0f);
         }));
         
         switchSound.OnDisable.AddListener((() =>
         {
+            PlaySoundButton();
             audioMixer.SetFloat("SoundVolume", -80f);
         }));
         
         switchSound.OnEnable.AddListener((() =>
         {
+            PlaySoundButton();
             audioMixer.SetFloat("SoundVolume", 0f);
         }));
         

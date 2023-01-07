@@ -62,6 +62,7 @@ public class Switch : MonoBehaviour
         rightBackgroundSize = new Vector2(GetComponent<RectTransform>().sizeDelta.x, knob.sizeDelta.y);
         
         button.onClick.AddListener((() => IsActive = !IsActive));
+        IsActive = IsActive;
     }
 
     private IEnumerator KnobSlide(RectTransform _transform, Vector2 _finalPosition, float _slideTime)
