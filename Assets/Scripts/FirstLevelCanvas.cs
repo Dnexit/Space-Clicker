@@ -14,6 +14,7 @@ public class FirstLevelCanvas : Page
      [SerializeField] private TextMeshProUGUI scoreText;
      [SerializeField] private string scoreBaseText = "SCORE: ";
      [SerializeField] private string scoreFunText;
+     [SerializeField] private StarAnimationCanvas starAnimationCanvas;
      
      private int count = 0;
      
@@ -33,8 +34,8 @@ public class FirstLevelCanvas : Page
              scoreText.text = scoreBaseText + count;
              if (count == 30)
              {
+                 starAnimationCanvas.ShowCanvas(secondLevelGameCanvas, count);
                  this.HideCanvas();
-                 secondLevelGameCanvas.ShowCanvas(count);
              }
          });
      }

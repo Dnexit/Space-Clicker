@@ -15,6 +15,11 @@ public class Page : MonoBehaviour
     {
         gameObject.SetActive(true);    
     }
+    
+    public virtual void ShowCanvas(int count)
+    {
+        gameObject.SetActive(true);    
+    }
 
     public virtual void PlaySoundButton()
     {

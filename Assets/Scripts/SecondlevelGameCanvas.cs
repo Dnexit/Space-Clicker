@@ -19,6 +19,7 @@ public class SecondlevelGameCanvas : Page
     {
         settingsButton.onClick.AddListener(() =>
         {
+            PlaySoundButton();
             this.HideCanvas();
             _settingsCanvas.ShowCanvas(this);
         });
@@ -34,7 +35,7 @@ public class SecondlevelGameCanvas : Page
         });
     }
 
-    public void ShowCanvas(int _count)
+    public override void ShowCanvas(int _count)
     {
         count = _count;
         scoreText.text = scoreBaseText + count;
