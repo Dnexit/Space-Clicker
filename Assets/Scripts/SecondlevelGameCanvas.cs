@@ -8,10 +8,11 @@ public class SecondlevelGameCanvas : Page
 {
     [SerializeField] private Button settingsButton;
     [SerializeField] private SettingsCanvas _settingsCanvas;
+    [SerializeField] private ThirdlevelGameCanvas thirdlevelGameCanvas;
     [SerializeField] private Button mainButton;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private string scoreBaseText = "SCORE: ";
-    [SerializeField] private string scoreFunText;
+    [SerializeField] private string scoreFunText = "OHHHH YEAH LET'S GO";
      
     private int count = 0;
 
@@ -28,9 +29,14 @@ public class SecondlevelGameCanvas : Page
         {
             count++;
             scoreText.text = scoreBaseText + count;
-            if (count == 10)
+            if (count == 60)
             {
                 scoreText.text = scoreFunText;
+            }
+            if (count == 80)
+            {
+                HideCanvas();
+                thirdlevelGameCanvas.ShowCanvas();
             }
         });
     }
