@@ -29,6 +29,7 @@ public class FirstLevelCanvas : Page
 
          mainButton.onClick.AddListener(() =>
          {
+             PlaySoundButton();
              count++;
              scoreText.text = scoreBaseText + count;
              if (count == 15)

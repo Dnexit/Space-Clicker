@@ -26,6 +26,7 @@ public class WinCanvas : Page
         
         backButton.onClick.AddListener((() =>
         {
+            PlaySoundButton();
             HideCanvas();
             logoCanvas.ShowCanvas();
         }));
